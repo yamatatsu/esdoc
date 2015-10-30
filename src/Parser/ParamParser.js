@@ -37,10 +37,10 @@ export default class ParamParser {
 
     // e.g {number}
     if (type) {
-      match = value.match(/^\{(.*)\}(\s+|$)/);
+      match = value.match(/^\{(.*?)\}(\s+|$)/);
       if (match) {
         typeText = match[1];
-        value = value.replace(/^\{(.*)\}(\s+|$)/, '');
+        value = value.replace(/^\{(.*?)\}(\s+|$)/, '');
       } else {
         typeText = '*';
       }
